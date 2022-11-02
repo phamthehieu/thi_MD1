@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thi 2</title>
+</head>
+<body>
+<script>
+    function deleteNumberFromArray(arr, inDex) {
+        let newArr = [];
+        if (inDex >= 0 && inDex < arr.length) {
+            for (let i = 0; i < inDex; i++) {
+                newArr.push(arr[i]);
+            }
+            for (let i = inDex + 1; i < arr.length; i++) {
+                newArr.push(arr[i]);
+            }
+        } else return arr;
+        return newArr;
+    }
+
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let inDex = +prompt("Nhập số cần xóa");
+    document.write(deleteNumberFromArray(arr, inDex) + "")
+</script>
+</body>
+</html>
